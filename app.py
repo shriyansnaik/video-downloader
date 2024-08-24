@@ -32,7 +32,7 @@ def get_available_formats(video_url):
         'quiet': True,
         'noplaylist': True,
         'listformats': True,
-        'cookies_from_browser': 'safari'
+        'cookiesfrombrowser': ('safari',)
     }
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         info = ydl.extract_info(video_url, download=False)
